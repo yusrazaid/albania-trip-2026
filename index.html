@@ -1,0 +1,534 @@
+    .page {
+        width: 297mm;
+        height: 210mm;
+        margin: 0 auto 16px auto;
+        padding: 16mm 18mm 12mm 18mm;
+        background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        page-break-after: always;
+        break-after: page;
+        overflow: hidden;
+    }
+
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+
+    .page-title {
+        font-size: 18pt;
+        font-weight: 800;
+        color: #f8fafc;
+        letter-spacing: -0.5px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .page-title span {
+        color: #38bdf8;
+    }
+
+    .page-badge {
+        font-size: 8.5pt;
+        font-weight: 600;
+        background: rgba(56, 189, 248, 0.15);
+        color: #38bdf8;
+        padding: 4px 10px;
+        border-radius: 20px;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+
+    .page-content {
+        flex: 1 1 0;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .page-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding-top: 6px;
+        font-size: 8pt;
+        color: #94a3b8;
+    }
+
+    /* Slide 1: Title Slide Custom Styling */
+    .title-slide {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        padding: 30mm;
+    }
+
+    .title-hero {
+        max-width: 800px;
+    }
+
+    .title-badge-main {
+        display: inline-block;
+        font-size: 10pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #38bdf8;
+        background: rgba(56, 189, 248, 0.1);
+        padding: 6px 16px;
+        border-radius: 30px;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        margin-bottom: 20px;
+    }
+
+    .title-main {
+        font-size: 34pt;
+        font-weight: 900;
+        line-height: 1.15;
+        color: #ffffff;
+        margin-bottom: 16px;
+        letter-spacing: -1px;
+    }
+
+    .title-sub {
+        font-size: 14pt;
+        color: #cbd5e1;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+    .meta-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .meta-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        padding: 14px;
+        text-align: center;
+    }
+
+    .meta-card h4 {
+        font-size: 8.5pt;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #94a3b8;
+        margin: 0 0 4px 0;
+    }
+
+    .meta-card p {
+        font-size: 13pt;
+        font-weight: 700;
+        color: #f8fafc;
+        margin: 0;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 16px;
+        height: 100%;
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        height: 100%;
+    }
+
+    .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        height: 100%;
+    }
+
+    .card {
+        background: rgba(30, 41, 59, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .card h3 {
+        font-size: 11.5pt;
+        color: #38bdf8;
+        margin: 0 0 8px 0;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .card p, .card li {
+        font-size: 9pt;
+        color: #cbd5e1;
+        line-height: 1.45;
+        margin: 0 0 6px 0;
+    }
+
+    .card ul {
+        padding-left: 16px;
+        margin: 0;
+    }
+
+    .highlight-box {
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(30, 58, 138, 0.2) 100%);
+        border-left: 4px solid #38bdf8;
+        border-top: 1px solid rgba(56, 189, 248, 0.2);
+        border-right: 1px solid rgba(56, 189, 248, 0.2);
+        border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+        border-radius: 8px;
+        padding: 12px 14px;
+        margin-bottom: 10px;
+    }
+
+    .highlight-box h4 {
+        font-size: 10.5pt;
+        color: #38bdf8;
+        margin: 0 0 4px 0;
+    }
+
+    .highlight-box p {
+        font-size: 9pt;
+        margin: 0;
+        color: #e2e8f0;
+    }
+
+    /* Table Styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 8.5pt;
+        background: rgba(30, 41, 59, 0.5);
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    th, td {
+        padding: 8px 10px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    th {
+        background: rgba(15, 23, 42, 0.8);
+        color: #38bdf8;
+        font-weight: 700;
+        font-size: 9pt;
+    }
+
+    tr:last-child td {
+        border-bottom: none;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 2px 6px;
+        font-size: 7.5pt;
+        font-weight: 600;
+        background: rgba(34, 197, 94, 0.15);
+        color: #4ade80;
+        border-radius: 4px;
+    }
+
+    .tag-amber {
+        background: rgba(245, 158, 11, 0.15);
+        color: #fbbf24;
+    }
+
+    @media print {
+        body { background: none; }
+        .page { margin: 0; border: none; box-shadow: none; height: 297mm; width: 210mm; /* rotated for presentation landscape */ }
+    }
+</style>
+
+
+<!-- Slide 1: Title Slide -->
+<section class="page title-slide">
+    <div class="title-hero">
+        <span class="title-badge-main">December 3 – 6, 2026 • 7 Travelers • £200 Master Cap</span>
+        <h1 class="title-main">Albania Winter Expedition</h1>
+        <p class="title-sub">Mountains, Canyons & Coastal Fortresses — The Ultimate 4-Day Grand Route</p>
+        
+        <div class="meta-grid">
+            <div class="meta-card">
+                <h4>Logistics</h4>
+                <p>Ryanair Direct + Hyundai H1 Van</p>
+            </div>
+            <div class="meta-card">
+                <h4>Accommodations</h4>
+                <p>Berat Villa, Vlorë Suites & Tirana Flats</p>
+            </div>
+            <div class="meta-card">
+                <h4>Financial Status</h4>
+                <p>100% Locked & Fully Balanced</p>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer" style="width: 100%; margin-top: 30px;">
+        <span>Lead Organizer: Zaid Abbasi</span>
+        <span>Slide 1 of 5</span>
+    </footer>
+</section>
+
+<!-- Slide 2: Trip Parameters & Zero-Compromise Quality -->
+<section class="page">
+    <header class="page-header">
+        <div class="page-title"><span>01</span> Quality Without Compromise</div>
+        <div class="page-badge">Zero Budget Cuts on Experience</div>
+    </header>
+    <div class="page-content">
+        <div class="grid-2">
+            <div class="card" style="justify-content: space-between;">
+                <div>
+                    <h3>👑 Premium Standards on a Budget</h3>
+                    <p>We proved that strict budget management (£200/person cap) doesn't mean cutting corners. Every single logistical element has been optimized for maximum comfort, group bonding, and safety:</p>
+                    <ul style="margin-top: 8px;">
+                        <li><strong>The Vehicle:</strong> Hyundai H1 Automatic 8-Seater Minivan with 3 full adult rows and an 850L cargo bay. No cramped jump seats!</li>
+                        <li><strong>Night 1 (Berat):</strong> Georgemishel Guest House — private luxury villa for 8 adults with breakfast included (£76.38 total).</li>
+                        <li><strong>Night 2 (Vlorë):</strong> Sea & Sand Hotel — Superior Quadruple + Classic Triple seafront rooms with breakfast included (£83.42 total).</li>
+                        <li><strong>Night 3 (Tirana):</strong> AM Apartment Tirana — Two modern 1-bedroom apartments with secure garage parking and balcony views (£75.52 total).</li>
+                    </ul>
+                </div>
+                <div class="highlight-box" style="margin-top: 10px;">
+                    <h4>The Golden Rule</h4>
+                    <p>Total committed spend for all 7 adults across 3 nights of lodging and flights is just <strong>£588.05</strong>. Every member's share of fixed costs is locked at exactly <strong>£83.18</strong>.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h3>🛡️ Risk Mitigation & Logistics Audit</h3>
+                <div class="highlight-box">
+                    <h4>Vehicle & Deposit</h4>
+                    <p>Radius Car Rental (Ref: <code>G96389719</code>). Pre-paid online (£13.67), balance due at desk (€140), and $1,000 credit card security deposit hold requiring a physical card in lead driver's name.</p>
+                </div>
+                <div class="highlight-box">
+                    <h4>Cash Reserves & Payments</h4>
+                    <p>Night 3 in Tirana (€88 cash due upon arrival) is securely allocated in our unallocated cash pool. Zero hidden fees or unexpected card surcharges.</p>
+                </div>
+                <div class="highlight-box">
+                    <h4>Daylight Optimisation</h4>
+                    <p>All heavy driving and mountain crossings are scheduled between 10:00 AM and 4:15 PM, maximizing winter daylight for sightseeing and photography.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <span>Albania Expedition 2026 • Master Reference</span>
+        <span>Slide 2 of 5</span>
+    </footer>
+</section>
+
+<!-- Slide 3: The Grand Route & Interactive Map -->
+<section class="page">
+    <header class="page-header">
+        <div class="page-title"><span>02</span> The Grand Southern & Coastal Loop</div>
+        <div class="page-badge">563 km Scenic Circuit</div>
+    </header>
+    <div class="page-content">
+        <div class="grid-3">
+            <div class="card">
+                <h3>🏔️ Leg 1: Mountain Strongholds</h3>
+                <p><strong>Tirana Airport ➔ Krujë ➔ Berat</strong></p>
+                <ul>
+                    <li>Land at TIA (09:55), pick up Hyundai H1 van.</li>
+                    <li>Explore 400-year-old Krujë Ottoman bazaar and mountaintop castle.</li>
+                    <li>Drive south via SH4 highway to Berat, the "City of a Thousand Windows".</li>
+                    <li>Evening stroll across Gorica Bridge and feast on *Tavë Kosi* in Mangalem.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🏛️ Leg 2: Ancient Coasts</h3>
+                <p><strong>Berat ➔ Apollonia ➔ Vlorë</strong></p>
+                <ul>
+                    <li>Tour the inhabited citadel of Kalaja e Beratit.</li>
+                    <li>Explore 2,500-year-old Greco-Roman ruins at Apollonia Archaeological Park.</li>
+                    <li>Golden hour drive along the Bay of Vlorë.</li>
+                    <li>Seafood feast along the palm-lined Lungomare promenade.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>🌊 Leg 3: Riviera & Capital</h3>
+                <p><strong>Llogara ➔ Zvërnec ➔ Tirana ➔ Bovilla</strong></p>
+                <ul>
+                    <li>Ascend Ceraunian mountains over Llogara Pass (1,043m elevation).</li>
+                    <li>Walk wooden bridge to Zvërnec island monastery in Narta lagoon.</li>
+                    <li>Saturday night festivities in Skanderbeg Square & Blloku nightlife.</li>
+                    <li>Sunday morning canyon hike at Lake Bovilla before departure.</li>
+                </ul>
+            </div>
+        </div>
+        <div style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 10px 14px; margin-top: 10px; display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <strong style="color: #38bdf8; font-size: 9.5pt;">Interactive Google Maps Route Link:</strong>
+                <span style="color: #cbd5e1; font-size: 8.5pt; margin-left: 8px;">TIA ➔ Krujë ➔ Berat ➔ Apollonia ➔ Vlorë ➔ Llogara Pass ➔ Zvërnec ➔ Durrës ➔ Tirana ➔ Bovilla ➔ TIA</span>
+            </div>
+            <span class="tag">Active GPS Route</span>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <span>Albania Expedition 2026 • Master Reference</span>
+        <span>Slide 3 of 5</span>
+    </footer>
+</section>
+
+<!-- Slide 4: Day-by-Day Epic Itinerary -->
+<section class="page">
+    <header class="page-header">
+        <div class="page-title"><span>03</span> Day-by-Day Epic Schedule (10 AM – 10 PM)</div>
+        <div class="page-badge">4 Days / 3 Nights</div>
+    </header>
+    <div class="page-content">
+        <div class="grid-4">
+            <div class="card">
+                <h3>Day 1: Dec 3</h3>
+                <p><strong>Mountain & Windows</strong></p>
+                <ul>
+                    <li><strong>10:00:</strong> TIA Arrival & Van Pickup.</li>
+                    <li><strong>11:30:</strong> Krujë Bazaar & Castle (*byrek* lunch).</li>
+                    <li><strong>14:00:</strong> Drive south to Berat.</li>
+                    <li><strong>16:30:</strong> Check into Georgemishel Villa.</li>
+                    <li><strong>18:00:</strong> Gorica Bridge & Tavern Dinner.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Day 2: Dec 4</h3>
+                <p><strong>Citadel & Adriatic</strong></p>
+                <ul>
+                    <li><strong>10:00:</strong> Berat Castle Citadel tour.</li>
+                    <li><strong>12:00:</strong> Drive to Apollonia ruins.</li>
+                    <li><strong>13:30:</strong> Greco-Roman site & St. Mary Monastery.</li>
+                    <li><strong>15:30:</strong> Coastal drive to Vlorë.</li>
+                    <li><strong>18:00:</strong> Sea & Sand Hotel & Lungomare seafood.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Day 3: Dec 5</h3>
+                <p><strong>Pass & Festive City</strong></p>
+                <ul>
+                    <li><strong>09:30:</strong> Llogara Pass ascent (1,043m panorama & tea).</li>
+                    <li><strong>12:00:</strong> Zvërnec Island monastery.</li>
+                    <li><strong>13:30:</strong> Durrës Roman Amphitheatre.</li>
+                    <li><strong>16:30:</strong> AM Apartments in Tirana.</li>
+                    <li><strong>17:30:</strong> Skanderbeg Christmas Market & Blloku.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Day 4: Dec 6</h3>
+                <p><strong>Canyon & Flight</strong></p>
+                <ul>
+                    <li><strong>10:00:</strong> Lake Bovilla cliffside canyon hike.</li>
+                    <li><strong>13:00:</strong> Pazari i Ri New Bazaar lunch (*qofte*).</li>
+                    <li><strong>17:00:</strong> Grand Park Artificial Lake stroll.</li>
+                    <li><strong>19:30:</strong> Drive to TIA, refuel van, return keys.</li>
+                    <li><strong>22:50:</strong> Ryanair flight home.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <span>Albania Expedition 2026 • Master Reference</span>
+        <span>Slide 4 of 5</span>
+    </footer>
+</section>
+
+<!-- Slide 5: Financial Audit & Luxury Dining Power -->
+<section class="page">
+    <header class="page-header">
+        <div class="page-title"><span>04</span> Financial Reconciliation & Dining Power</div>
+        <div class="page-badge">100% Balanced Master Ledger</div>
+    </header>
+    <div class="page-content">
+        <div class="grid-2">
+            <div class="card" style="justify-content: space-between;">
+                <div>
+                    <h3>📊 Master Budget Summary (£1,400 Cap)</h3>
+                    <table>
+                        <thead>
+                           <tr>
+                               <th>Category</th>
+                               <th>Committed / Paid</th>
+                               <th>Status</th>
+                           </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Flights (7 Pax)</strong></td>
+                                <td>£352.73</td>
+                                <td><span class="tag">Paid in Full</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Accommodations (3 Nights)</strong></td>
+                                <td>£235.32</td>
+                                <td><span class="tag">All 3 Booked</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Car Rental Pre-payment</strong></td>
+                                <td>£13.67</td>
+                                <td><span class="tag">Paid (£120 due at desk)</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total Spent / Committed So Far</strong></td>
+                                <td><strong>£601.72</strong></td>
+                                <td><span class="tag tag-amber">55.2% of Pool</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Remaining Cash Pool</strong></td>
+                                <td><strong>£678.13</strong></td>
+                                <td><span class="tag">Reserved for Food & Fuel</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="font-size: 8pt; color: #94a3b8; margin-top: 6px;">
+                    * Shared upfront commitments total £248.99 (£35.57 per person). Net reimbursement due to Zaid Abbasi is +£516.59.
+                </div>
+            </div>
+            <div class="card" style="justify-content: space-between;">
+                <div>
+                    <h3>🍷 Luxury Dining Power on Remaining Budget</h3>
+                    <p>Because we secured exceptionally cheap, top-tier accommodations and flights, our remaining cash pool gives us incredible purchasing power in Albania:</p>
+                    <div class="highlight-box" style="margin-top: 8px;">
+                        <h4>Massive Daily Dining Budget</h4>
+                        <p>We have <strong>£678.13</strong> remaining for fuel (~£105), car desk balance (~£120), and daily expenses. This leaves over <strong>£450 pure cash</strong> exclusively for food and drinks!</p>
+                    </div>
+                    <ul style="margin-top: 6px;">
+                        <li><strong>Daily Food Allowance:</strong> Over <strong>£16.00 per person, per day</strong>.</li>
+                        <li><strong>What This Buys:</strong> In Albanian taverns, £16/day is an absolute feast! You can easily order massive platters of slow-roasted lamb (*Tavë Kosi*), grilled sea bass, fresh village salads, appetizers, wine, and craft beers without ever worrying about the bill.</li>
+                    </ul>
+                </div>
+                <div style="text-align: center; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 8px; padding: 10px;">
+                    <span style="font-size: 10pt; font-weight: 700; color: #4ade80;">Ready for Takeoff • December 3, 2026 🚀</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <span>Albania Expedition 2026 • Master Reference</span>
+        <span>Slide 5 of 5</span>
+    </footer>
+</section>
+
+
